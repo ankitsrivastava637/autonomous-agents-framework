@@ -1,17 +1,3 @@
-
-
-import sys
-import os
-
-# Add the parent directory of the current file to sys.path
-current_dir = os.path.dirname(os.path.abspath(__file__))
-parent_dir = os.path.dirname(current_dir)
-sys.path.append(parent_dir)
-
-
-
-
-# main.py
 import asyncio
 import logging
 from agents.concrete_agent import ConcreteAgent
