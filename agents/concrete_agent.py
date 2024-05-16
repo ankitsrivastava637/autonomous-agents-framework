@@ -1,4 +1,3 @@
-# agents/concrete_agent.py
 import asyncio
 import logging
 import random

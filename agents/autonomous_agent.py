@@ -1,4 +1,3 @@
-# agents/autonomous_agent.py
 import abc
 import logging
 from typing import Any, Callable, Type

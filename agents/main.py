@@ -3,8 +3,6 @@ import logging
 from agents.concrete_agent import ConcreteAgent
 from agents.communication import Inbox, Outbox
 
-
-
 async def main(duration: int = 10):
     # Set up logging
     logging.basicConfig(level=logging.DEBUG)
