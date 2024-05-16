@@ -1,5 +1,5 @@
 
-## Autonomous Agents Framework
+# Autonomous Agents Framework
 Welcome to the Autonomous Agents Framework! This Python project provides a flexible and scalable framework for implementing autonomous agents that communicate asynchronously.
 
 ## Overview
@@ -15,14 +15,14 @@ Behaviors: Support for registering proactive behaviors that generate messages ba
 ## Installation
 To use the Autonomous Agents Framework, follow these steps:
 
-# Clone the repository:
+## Clone the repository:
 
 ```bash
 git clone https://github.com/ankitsrivastava637/autonomous-agents-framework.git
 cd autonomous-agents-framework
 ```
 
-# Set up a virtual environment and install dependencies:
+## Set up a virtual environment and install dependencies:
 
 ```bash
 python3 -m venv venv
@@ -32,7 +32,7 @@ pip install -r requirements.txt
 ```
 
 ## Usage
-# To create and run autonomous agents using this framework, follow these steps:
+## To create and run autonomous agents using this framework, follow these steps:
 
 - Define your agent class by subclassing AutonomousAgent.
 - Implement message handlers to react to incoming messages.
