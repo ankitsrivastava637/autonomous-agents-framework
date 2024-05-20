@@ -19,8 +19,8 @@ async def main(duration: int = 10):
     outbox_agent2 = Outbox()
 
     # Create two instances of ConcreteAgent for testing (loop enabled)
-    agent1 = ConcreteAgent(inbox_agent1, outbox_agent2, enable_loop=False)  # Disable loop initially
-    agent2 = ConcreteAgent(inbox_agent2, outbox_agent1, enable_loop=False)  # Disable loop initially
+    agent1 = ConcreteAgent(inbox_agent1, outbox_agent2, enable_loop=True)  # Disable loop initially
+    agent2 = ConcreteAgent(inbox_agent2, outbox_agent1, enable_loop=True)  # Disable loop initially
 
     logger.info("Testing agents initialized.")
 

@@ -32,7 +32,7 @@ class ConcreteAgent(AutonomousAgent):
         """Handle an incoming message."""
         await super().handle_message(message)
         if "hello" in message:
-            self._logger.info("Received hello message: %s", message)
+            await self._handle_message_with_hello(message)
 
     async def register_behaviour(self, behaviour: Callable[[], Any]):
         """
@@ -48,14 +48,14 @@ class ConcreteAgent(AutonomousAgent):
         self._message_handlers[message_type] = handler
         self._logger.debug("Message handler registered for type: %s", message_type)
 
-    async def _handle_message(self, message: Any):
+    async def _handle_message_with_hello(self, message: Any):
         """
         Handle incoming messages.
 
         :param message: The incoming message.
         """
         if "hello" in message:
-            self._logger.info("Received hello message: %s", message)    
+            self._logger.info("Received hello message: %s", message)   
 
     async def generate_random_message(self, duration: int = 10):
         """Generate random 2-word messages for a specified duration."""
@@ -64,7 +64,7 @@ class ConcreteAgent(AutonomousAgent):
 
         while asyncio.get_event_loop().time() < end_time:  
             message = " ".join(random.sample(["hello", "sun", "world", "space", "moon", "crypto", "sky", "ocean", "universe", "human"], 2))
-            await self._handle_message(message)
+            await self.handle_message(message)
             await self.emit_message(message)    
             self._logger.debug("Generated message: %s", message)
             await asyncio.sleep(2)  # Sleep for 2 seconds between messages
